@@ -34,7 +34,8 @@
     border-radius: 20px;
     text-align: center;
     display: grid;
-    padding:7px 2px;   
+    padding:7px 2px; 
+    color:black;
 }
 #third-section #view a:hover{
     background-color: rgb(3, 221, 174);
