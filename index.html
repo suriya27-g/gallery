@@ -1,14 +1,14 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
-    <link rel='stylesheet' href="{% static 'gridlayout.css' %}">
-    <link rel='stylesheet' href="{% static 'navstyle.css' %}">
-    <link rel='stylesheet' href="{% static 'footstyle.css' %}">
-    <link rel='stylesheet' href="{% static 'sectionstyle.css' %}">
+    <link rel='stylesheet' href="gridlayout.css">
+    <link rel='stylesheet' href="navstyle.css">
+    <link rel='stylesheet' href="footstyle.css">
+    <link rel='stylesheet' href="sectionstyle.css}">
 </head>
 <body>
     <div id='grid-container'> 
@@ -20,7 +20,7 @@
                         <a href='' class ='nav-same'></a>
                         <a href='' class ='nav-same'>Home</a>
                         <a href='#form' class ='nav-same'>Contact</a>
-                        <a href="{% url 'alime_gallery' %}" id ='login'>Gallery</a>
+                        <a href="gallery.html" id ='login'>Gallery</a>
                     </div>
                     <i id='burgermenu' onclick="validate()">
                         <svg id='svg' viewBox="0 0 100 80" width="30" height="30">
@@ -44,7 +44,7 @@
         <section>
             <div id='grid-section-container'>
                 <div id='first-section'>
-                    <img src="{% static 'images/harley-davidson.jpg' %}">
+                    <img src="images/harley-davidson.jpg">
                 </div>
 
                 <div id='second-section'>
@@ -119,7 +119,7 @@
                 </div>
                 <div id="third-section">
                     <div id="view">
-                        <a href="{% static 'gallery.html' %}">View More</a>
+                        <a href="gallery.html">View More</a>
                     </div>
                 </div>
             </div>
@@ -156,10 +156,10 @@
                         </form>
                     </div>
                     <div id='icons'>
-                        <a><img src="{% static 'images/facebook-32.png' %}" width=''></a>
-                        <a><img src="{% static 'images/twitter-4-32.png' %}" width=''></a>
-                        <a><img src="{% static 'images/instagram-4-32.png' %}" width=''></a>
-                        <a><img src="{% static 'images/pinterest-4-32.png' %}" width=''></a>
+                        <a><img src="images/facebook-32.png" width=''></a>
+                        <a><img src="images/twitter-4-32.png" width=''></a>
+                        <a><img src="images/instagram-4-32.png" width=''></a>
+                        <a><img src="images/pinterest-4-32.png" width=''></a>
                         <a><img src='' width=''></a>
                     </div>
                 </div>
