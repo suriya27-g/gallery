@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#grid-footer-container{
+    display:grid;
+    margin-top: 15px;
+    font-family: sans-serif;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(100px,auto);
+    grid-template-areas: 
+    "contact-info contact-info contact-info contact-info contact-info contact-info  social-media  social-media  social-media  social-media  social-media  social-media"
+    "copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright";
+}
+#grid-footer-container > *{
+    padding:5px;
+    color:white;
+}
+#contact-info{
+    grid-area: contact-info;
+}
+#social-media{
+    grid-area: social-media;
+}
+#copyright{
+    grid-area: copyright;
+}
+
+#grid-footer-container #contact-info,#social-media{
+    background-color: rgb(56, 53, 53);;
+}
+
+#grid-footer-container #copyright{
+    background-color:  rgb(45, 40, 40);
+    color:white;
+    text-align: center;
+}
+
+.mb-30{
+    padding:15px;
+    text-align: center;
+}
+.mb-30 a{
+    color:white;
+    text-decoration: none;
+}
+#user-mail{
+    padding:15px;
+    text-align: center;
+}
+#txt{
+    padding:5px;
+    border:medium solid rgb(41, 40, 40);
+    border-radius: 5px;
+}
+#sub{
+    padding: 4px 15px;
+    border: thin solid rgb(3, 221, 174);
+    border-radius: 20px;
+    color:black;
+    background-color:  rgb(3, 221, 174);
+    font-size: 1rem;
+}
+#icons{
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+}
+#icons a{
+    padding:5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 720px){
+    #grid-footer-container{
+        grid-template-areas: 
+        "social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media"
+        "contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info"
+        "copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright";
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #grid-footer-container{
+        grid-template-areas: 
+        "social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media social-media"
+        "contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info contact-info"
+        "copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright";
+    }
+}

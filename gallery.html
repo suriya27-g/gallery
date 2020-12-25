@@ -1,0 +1,192 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel='stylesheet' href="{% static 'gridlayout.css' %}">
+    <link rel='stylesheet' href="{% static 'navstyle.css' %}">
+    <link rel='stylesheet' href="{% static 'footstyle.css' %}">
+    <link rel='stylesheet' href="{% static 'gallerystyle.css' %}"> 
+</head>
+
+<body>
+    <div id='grid-container'> 
+        <header>
+            <nav>
+                <div id='content'>
+                    <h1 id='logo'>Wings</h1>
+                    <div id='navigation'>
+                        <a href='' class ='nav-same'></a>
+                        <a href="{% url 'alime_home' %}" class ='nav-same'>Home</a>
+                        <a href='#form' class ='nav-same'>Contact</a>
+                        <a href='' id ='login'>Gallery</a>
+                    </div>
+                    <i id='burgermenu' onclick="validate()">
+                        <svg id='svg' viewBox="0 0 100 80" width="30" height="30">
+                        <rect width="100" height="15"></rect>
+                        <rect y="30" width="100" height="15"></rect>
+                        <rect y="60" width="100" height="15"></rect>
+                        </svg>
+                    </i>
+                </div>
+        
+                <div id='dropdown'>
+                    <a href=''>Home</a>
+                    <a href=''>About</a>
+                    <a href=''>Services</a>
+                    <a href=''>Contact</a>
+                </div>
+            </nav>
+        
+        </header>
+
+        <section>
+            <div id='grid-gallery-container'>
+                <div id='gall-head'>
+                    <div id="gallery"><h1>Gallery</h1></div>
+                    <div id='search-form'>
+                        <form method='GET'>
+                            {% csrf_token %}
+                            <label for="search" id='search-head'> </label>
+                            <input type="search" name="search" id="search" size="12" placeholder='--Search--'>
+                        </form>
+                    </div>
+                </div>
+                <div id='gall-body'>
+        
+                    <div class ='photo-container'>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?nature'>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="gallery-container">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?food'>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?travel'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?sport'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?art'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?city'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?mamels'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?birds'>
+                                </div>
+                            </div>
+                        </div><div class="gallery-container ">
+                            <div class='gallery-item'>
+                                <div class ='image'>
+                                        <img src='https://source.unsplash.com/500x400/?boy'>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+       
+        <footer>
+            <div id='grid-footer-container'>
+                <div id='contact-info'>
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Email</p>
+                        <a href="mailto:info.deercreative@gmail.com">info.deercreative@gmail.com</a>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Call Us</p>
+                        <a href="#">+6511.188.888</a>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Visit Us</p>
+                        <a href="#">60-49 Road 11378 New York</a>
+                    </div>
+                </div>
+                <div id='social-media'>
+                    <div id='user-mail'>
+                        <legend>Get in touch with us</legend><br>
+                        <form method="POST" id='form'>
+                            {% csrf_token %}
+                            <input type='Email' placeholder='Enter your E-mail' size="30" id='txt'>
+                            <br>
+                            <br>
+                            <input type='submit' value='submit' id='sub'>
+                        </form>
+                    </div>
+                    <div id='icons'>
+                        <a><img src="{% static 'images/facebook-32.png' %}" width=''></a>
+                        <a><img src="{% static 'images/twitter-4-32.png' %}" width=''></a>
+                        <a><img src="{% static 'images/instagram-4-32.png' %}" width=''></a>
+                        <a><img src="{% static 'images/pinterest-4-32.png' %}" width=''></a>
+                        <a><img src='' width=''></a>
+                    </div>
+                </div>
+                <div id='copyright'>
+                    <h6>@Copyright All rights reserver</h6>
+                </div>
+            </div>
+        </footer>  
+    </div> 
+</body>
+
+<script>
+    var dropdown=document.querySelector('nav #dropdown');
+    var button=document.querySelector('nav #content #burgermenu');
+
+    function validate(){
+        if(dropdown.style.display === 'grid')
+            dropdown.style.display = 'none';
+        else
+            dropdown.style.display = 'grid';
+    };
+
+    addEventListener('resize',function(){
+        if(window.innerWidth > 700){
+            dropdown.style.display = 'none';
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#grid-container{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(50px,auto);
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "section section section section section section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+#grid-container > *{
+    border:none;
+}
+header{
+    grid-area: header;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 4;
+}
+section{
+    grid-area: section;
+}
+footer{
+    grid-area: footer;
+}
+
+
+@media only screen and (max-width: 720px){
+    #grid-container{
+        grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "section section section section section section section section section section section section"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #grid-container{
+        grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "section section section section section section section section section section section section"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+}
