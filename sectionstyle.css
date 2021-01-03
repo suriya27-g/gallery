@@ -108,21 +108,6 @@
     
 }
 
-@media only screen and (max-width: 1600px){
-    #first-section img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-    #grid-section-container{
-        grid-template-areas: 
-        ". firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec ."
-        ". . secondsec secondsec secondsec secondsec secondsec secondsec secondsec secondsec . ."
-         ". . . . . thirdsec thirdsec . . . . .";
-    }
-}    
-
 @media only screen and (max-width: 768px){
     #first-section img{
         width:100%;
