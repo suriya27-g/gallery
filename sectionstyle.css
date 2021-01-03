@@ -115,6 +115,12 @@
         object-fit: cover;
         object-position: 50% 50%;
     }
+    #grid-section-container{
+        grid-template-areas: 
+        ". firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec firstsec ."
+        ". . secondsec secondsec secondsec secondsec secondsec secondsec secondsec secondsec . ."
+         ". . . thirdsec thirdsec thirdsec thirdsec thirdsec thirdsec . . .";
+    }
 }    
 
 @media only screen and (max-width: 768px){
